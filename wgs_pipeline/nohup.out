@@ -1,0 +1,23 @@
+/ssd-cache/zlx/gtx-run/gtx_reference_data/analysis/germline/wes/
+----sample name: HG001
+----output path: /ssd-cache/zlx/gtx-run/gtx_reference_data/analysis/germline/wes/HG001/gatk_4.1.8.1
+/ssd-cache/zlx/gtx-run/gtx_reference_data/analysis/germline/wes/HG001/gatk_4.1.8.1/HG001.sort.bam no exist!
+/ssd-cache/zlx/gtx-run/lib/bwa-0.7.17/bwa mem -t 72 -M -Y -K 10000000 -R '@RG\tID:HG001\tSM:HG001\tPL:ILLUMINA' /ssd-cache/zlx/gtx-run/gtx_reference_data/reference/hg38/bwa-index/Homo_sapiens_assembly38.fasta /ssd-cache/zlx/gtx-run/gtx_reference_data/rawdata/germline/wes/SRR14724483_1.fastq.gz /ssd-cache/zlx/gtx-run/gtx_reference_data/rawdata/germline/wes/SRR14724483_2.fastq.gz | samtools sort -o /ssd-cache/zlx/gtx-run/gtx_reference_data/analysis/germline/wes/HG001/gatk_4.1.8.1/HG001.sort.bam -@ 72 
+
+/ssd-cache/zlx/gtx-run/gtx_reference_data/analysis/germline/wes/HG001/gatk_4.1.8.1/HG001.sort.bam.bai no exist!
+samtools index /ssd-cache/zlx/gtx-run/gtx_reference_data/analysis/germline/wes/HG001/gatk_4.1.8.1/HG001.sort.bam -@ 72 
+
+/ssd-cache/zlx/gtx-run/gtx_reference_data/analysis/germline/wes/HG001/gatk_4.1.8.1/HG001.sort.dup.bam no exist!
+java -jar /ssd-cache/zlx/gtx-run/lib/gatk-versions/gatk-package-4.1.8.1-SNAPSHOT-local.jar MarkDuplicates -I /ssd-cache/zlx/gtx-run/gtx_reference_data/analysis/germline/wes/HG001/gatk_4.1.8.1/HG001.sort.bam -O /ssd-cache/zlx/gtx-run/gtx_reference_data/analysis/germline/wes/HG001/gatk_4.1.8.1/HG001.sort.dup.bam -M /ssd-cache/zlx/gtx-run/gtx_reference_data/analysis/germline/wes/HG001/gatk_4.1.8.1/HG001.dup.out 
+
+/ssd-cache/zlx/gtx-run/gtx_reference_data/analysis/germline/wes/HG001/gatk_4.1.8.1/HG001.sort.dup.bam.bai no exist!
+samtools index /ssd-cache/zlx/gtx-run/gtx_reference_data/analysis/germline/wes/HG001/gatk_4.1.8.1/HG001.sort.dup.bam -@ 72 
+
+/ssd-cache/zlx/gtx-run/gtx_reference_data/analysis/germline/wes/HG001/gatk_4.1.8.1/HG001.bqsr.grp no exist!
+java -jar /ssd-cache/zlx/gtx-run/lib/gatk-versions/gatk-package-4.1.8.1-SNAPSHOT-local.jar  BaseRecalibrator -I /ssd-cache/zlx/gtx-run/gtx_reference_data/analysis/germline/wes/HG001/gatk_4.1.8.1/HG001.sort.dup.bam -R /ssd-cache/zlx/gtx-run/gtx_reference_data/reference/hg38/bwa-index/Homo_sapiens_assembly38.fasta --known-sites /ssd-cache/zlx/gtx-run/gtx_reference_data/reference/hg38/database/Mills_and_1000G_gold_standard.indels.hg38.vcf.gz --known-sites /ssd-cache/zlx/gtx-run/gtx_reference_data/reference/hg38/database/1000G_phase1.snps.high_confidence.hg38.vcf.gz --known-sites /ssd-cache/zlx/gtx-run/gtx_reference_data/reference/hg38/database/dbsnp_146.hg38.vcf.gz -O /ssd-cache/zlx/gtx-run/gtx_reference_data/analysis/germline/wes/HG001/gatk_4.1.8.1/HG001.bqsr.grp  
+
+java -jar /ssd-cache/zlx/gtx-run/lib/gatk-versions/gatk-package-4.1.8.1-SNAPSHOT-local.jar  ApplyBQSR -R /ssd-cache/zlx/gtx-run/gtx_reference_data/reference/hg38/bwa-index/Homo_sapiens_assembly38.fasta -I /ssd-cache/zlx/gtx-run/gtx_reference_data/analysis/germline/wes/HG001/gatk_4.1.8.1/HG001.sort.dup.bam --bqsr-recal-file /ssd-cache/zlx/gtx-run/gtx_reference_data/analysis/germline/wes/HG001/gatk_4.1.8.1/HG001.bqsr.grp -O /ssd-cache/zlx/gtx-run/gtx_reference_data/analysis/germline/wes/HG001/gatk_4.1.8.1/HG001.sort.dup.bqsr.bam 
+
+/ssd-cache/zlx/gtx-run/lib/gatk-versions/gatk-package-4.1.8.1-SNAPSHOT-local.jar
+python3 /ssd-cache/zlx/gtx-run/lib/gatk-facade.py HaplotypeCaller -R /ssd-cache/zlx/gtx-run/gtx_reference_data/reference/hg38/bwa-index/Homo_sapiens_assembly38.fasta -I /ssd-cache/zlx/gtx-run/gtx_reference_data/analysis/germline/wes/HG001/gatk_4.1.8.1/HG001.sort.dup.bqsr.bam -O /ssd-cache/zlx/gtx-run/gtx_reference_data/analysis/germline/wes/HG001/gatk_4.1.8.1/HG001.vcf.gz -L /ssd-cache/zlx/gtx-run/gtx_reference_data/rawdata/germline/wes/S31285117_Regions_hg38.interval_list 
+
