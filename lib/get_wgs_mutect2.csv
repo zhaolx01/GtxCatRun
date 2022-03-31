@@ -1,0 +1,5 @@
+Wed Mar 30 16:18:51 2022
+process,site,sample,version,align.sort,sort.bam.index,dup,dup.bam.index,BaseRecalibrator,ApplyBQSR,Mutect2,normal.GetPileupSummaries,tumor.GetPileupSummaries,CalculateContamination,LearnReadOrientationModel,FilterMutectCalls
+somatic,wgs,HCC1187BL,gatk_4.1.8.1,49:01.44,0:40.68,1:14:26,0:41.63,2:36:18,1:22:04,,,,,,
+somatic,wgs,HCC1187C,gatk_4.1.8.1,49:00.62,0:39.02,1:19:04,0:39.40,2:32:49,1:14:41,,,,,,
+somatic,wgs,HCC1187BL-HCC1187C,gatk_4.1.8.1,,,,,,,19:51:43,2:42.49,2:28.66,0:07.49,8:35.34,1:10.65

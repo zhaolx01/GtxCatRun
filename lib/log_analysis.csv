@@ -1,0 +1,5 @@
+log path,Mutect2,normal.GetPileupSummaries,tumor.GetPileupSummaries,CalculateContamination,LearnReadOrientationModel,FilterMutectCalls
+/ssd-cache/zlx/gtx-run/gtx_reference_data/analysis/somatic/wes/FFX_IL_N_24h_2-FFX_IL_T_24h_1/gtx_2.0.1-pre2,29:31.1,03:27.9,03:59.7,00:23.6,04:10.7,00:37.5
+/ssd-cache/zlx/gtx-run/gtx_reference_data/analysis/somatic/wes/FFX_IL_N_24h_2-FFX_IL_T_24h_1/gatk_4.1.8.1,17:41:41,37:01.2,38:10.0,00:31.1,12:58.9,00:44.1
+/ssd-cache/zlx/gtx-run/gtx_reference_data/analysis/somatic/wgs/HCC1187BL-HCC1187C/gtx_2.0.1-pre2,32:59.8,00:25.0,00:24.6,00:04.7,02:51.1,00:50.5
+/ssd-cache/zlx/gtx-run/gtx_reference_data/analysis/somatic/wgs/HCC1187BL-HCC1187C/gatk_4.1.8.1,10:31:04,02:20.0,02:17.0,00:07.2,08:28.4,01:05.2

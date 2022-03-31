@@ -1,0 +1,10 @@
+CollectAlignmentSummaryMetrics
+CollectBaseDistributionByCycle
+CollectGcBiasMetrics
+CollectInsertSizeMetrics
+CollectQualityYieldMetrics
+MeanQualityByCycle
+QualityScoreDistribution
+CollectHsMetrics
+CollectSequencingArtifactMetrics
+CollectTargetedPcrMetrics
